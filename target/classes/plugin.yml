@@ -1,5 +1,5 @@
 name: xpmilking
 main: com.exit.xpmilking.Plugin
-version: 0.20
+version: 1.0
 api-version: 1.15
 description: Allows people to milk other players
