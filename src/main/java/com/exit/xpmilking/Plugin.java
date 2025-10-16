@@ -39,12 +39,12 @@ public class Plugin extends JavaPlugin implements Listener {
 
 		boolean isHoldingGlassBottle = item.getType().toString().equals("GLASS_BOTTLE");
 
-		if (!isHoldingGlassBottle) return;
+		if (!isHoldingGlassBottle || !player.isSneaking()) return;
 		
 		Player tgt = (Player) event.getRightClicked();
 		float targetXP = tgt.getTotalExperience();
 
-		if (targetXP < 20) return;
+		if (targetXP < 11) return;
 
 		player.sendMessage("You milked " + tgt.getDisplayName());
 		tgt.sendMessage(player.getDisplayName() + " milked you");
